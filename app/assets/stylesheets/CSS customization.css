@@ -13,10 +13,15 @@ h1, h2, h3, h4 {
 	text-decoration: none;
 }
 
+.jumbotron {
+	border: 1px solid rgb(236,236,236);
+	padding-bottom: 10px;
+}
+
 .jumbotron h1 {
 	font-size: 53px;
 	font-weight: bold;
-	padding-bottom: 5px;
+	padding-bottom: 15px;
 }
 
 .jumbotron p {
@@ -30,7 +35,7 @@ h1, h2, h3, h4 {
 	padding-bottom: 5px;
 }
 
-.about p {
+	p {
 	font-size: 16px;
 	max-width: 600px;
 }
