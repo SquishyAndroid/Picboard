@@ -56,3 +56,12 @@ h1, h2, h3, h4 {
 	width: 100%;
 }
 	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+    background: #eee;
+  }
+}
