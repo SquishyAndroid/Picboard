@@ -8,7 +8,7 @@
 
 .box {
 	margin: 5px;
-	width: 214px;
+	width: 250px;
 }
 
 .box img {
@@ -18,3 +18,10 @@
 .row img {
 	width: 100%;
 }
+
+@media (min-width: 100px) and (max-width: 400px) {
+.box {
+	margin: 5px;
+	width: 282px;
+}
+	}
