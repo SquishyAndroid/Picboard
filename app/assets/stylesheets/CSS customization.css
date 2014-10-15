@@ -62,7 +62,7 @@ h1, h2, h3, h4 {
 }
 	}
 
-@media (min-width: 100px) and (max-width: 600px) {
+@media (min-width: 100px) and (max-width: 400px) {
 .jumbotron h1 {
 	text-align: center;
 }
