@@ -26,8 +26,8 @@ h1, h2, h3, h4 {
 
 .jumbotron p {
 	padding-left: 5px;
+	font-weight: light;
 }
-
 
 /* About page */
 .about h2 {
@@ -50,10 +50,21 @@ h1, h2, h3, h4 {
 	margin-bottom: 10px;
 }
 
+.actions a {
+	padding-top: 10px;
+	padding-right: 15px;
+}
+
 /* Responsive button sizes */
 @media (min-width: 100px) and (max-width: 600px) {
 .btn-responsive {
 	width: 100%;
+}
+	}
+
+@media (min-width: 100px) and (max-width: 600px) {
+.jumbotron h1 {
+	text-align: center;
 }
 	}
 

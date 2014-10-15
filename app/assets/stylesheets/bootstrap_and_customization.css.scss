@@ -7,7 +7,9 @@ $panel-default-heading-bg: white;
 $panel-default-text: #696969;
 $link-color: #d9534f;
 
+@import "bootstrap-sprockets";
 @import 'bootstrap';
+
 
 h2 {
 	font-weight: bold;
