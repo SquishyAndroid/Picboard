@@ -5,15 +5,28 @@
   <div class="box panel panel-default">
     <%= link_to image_tag(pin.image.url(:medium)), pin %>
     <div class="panel-body">
-      <p><strong><%= pin.user.name if pin.user %></strong></p>
-      <p><%= pin.description %></p>
+      <table>
+        <tr>
+          <td rowspan="3"><div class="round-image-50"><%= image_tag(pin.user.avatar.url(:thumb)) %>
+          </div></td>
+          <td><p><strong><%= pin.user.name if pin.user %></strong></p></td>
+        <tr>
+          <td><p><%= pin.description %></p></td>
+        </tr>
+      </table>
       <% if pin.user == current_user %>
-        <div class="actions">
-          <%= link_to edit_pin_path(pin) do %>
-            <span class="glyphicon glyphicon-edit"></span> Edit
+        <div class="show_actions">
+            <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <span class="glyphicon glyphicon-trash"></span>
           <% end %>
-          <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <span class="glyphicon glyphicon-trash"></span> Delete
+        <%= link_to edit_pin_path(pin) do %>
+            <span class="glyphicon glyphicon-edit"></span>
+          <% end %>
+          <%= link_to edit_pin_path(pin) do %>
+            <span class="glyphicon glyphicon-comment"></span>
+          <% end %>
+          <%= link_to edit_pin_path(pin) do %>
+            <span class="glyphicon glyphicon-heart"></span>
           <% end %>
         </div>
       <% end %>
