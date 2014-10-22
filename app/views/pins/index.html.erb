@@ -1,5 +1,6 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
+
 <div id="pins">
 <% @pins.each do |pin| %>
   <div class="box panel panel-default">
@@ -16,25 +17,19 @@
       </table>
       <% if pin.user == current_user %>
         <div class="show_actions">
-            <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <span class="glyphicon glyphicon-trash"></span>
-          <% end %>
-        <%= link_to edit_pin_path(pin) do %>
-            <span class="glyphicon glyphicon-edit"></span>
-          <% end %>
-          <%= link_to edit_pin_path(pin) do %>
-            <span class="glyphicon glyphicon-comment"></span>
-          <% end %>
-          <%= link_to edit_pin_path(pin) do %>
-            <span class="glyphicon glyphicon-heart"></span>
-          <% end %>
+          <a href="#"><span class="glyphicon glyphicon-comment"></span></a>
+          <a href="#"><span class="glyphicon glyphicon-heart"></span>
+          </a>
         </div>
       <% end %>
+      <div class="timestamp">
+          <%= time_ago_in_words(pin.created_at) %> ago
+        </div>
     </div>
   </div>
 <% end %>
 </div>
 
-<div class="infinite-scrolling">
-  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
-</div>
+
+<%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+

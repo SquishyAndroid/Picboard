@@ -14,19 +14,16 @@
 				</table>
 				<% if @pin.user == current_user %>
 				<div class="show_actions">
-            <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
             <span class="glyphicon glyphicon-trash"></span>
           <% end %>
-				<%= link_to edit_pin_path(@pin) do %>
+					<%= link_to edit_pin_path(@pin) do %>
             <span class="glyphicon glyphicon-edit"></span>
           <% end %>
-          <%= link_to edit_pin_path(@pin) do %>
-            <span class="glyphicon glyphicon-comment"></span>
-          <% end %>
-          <%= link_to edit_pin_path(@pin) do %>
-            <span class="glyphicon glyphicon-heart"></span>
-          <% end %>
         </div>
+        <div class="timestamp">
+					<%= time_ago_in_words(@pin.created_at) %> ago
+				</div>
       <% end %>
 		</div>
 	</div>

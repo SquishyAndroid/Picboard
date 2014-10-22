@@ -15,6 +15,12 @@ class PinsController < ApplicationController
     @pin = current_user.pins.build
   end
 
+  def upvote
+    @pin = Link.find(params[:id])
+    @pin.upvote_by current_user
+    redirect_to pins_path
+  end
+
 
   def edit
   end
