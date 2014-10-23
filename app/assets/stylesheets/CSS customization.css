@@ -1,3 +1,12 @@
+/* login and registration */
+
+.panel-default {
+	max-width: 400px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 /* Home Page */
 h1, h2, h3, h4 {
 	font-family: helvetica;
@@ -111,12 +120,17 @@ h1, h2, h3, h4 {
     img { width: 100% }
   }
 
+
 /* Responsive button sizes */
 @media (min-width: 100px) and (max-width: 400px) {
 .btn-responsive {
 	width: 100%;
 }
 	}
+
+.btn-responsive {
+	width: 100%;
+}
 
 /* align jumbotron main text on mobile devices */
 @media (min-width: 100px) and (max-width: 400px) {
