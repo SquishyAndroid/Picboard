@@ -18,8 +18,7 @@
       <% if pin.user == current_user %>
         <div class="show_actions">
           <a href="#"><span class="glyphicon glyphicon-comment"></span></a>
-          <a href="#"><span class="glyphicon glyphicon-heart"></span>
-          </a>
+          <a href="#"><span class="glyphicon glyphicon-heart"></span></a>
         </div>
       <% end %>
       <div class="timestamp">
@@ -30,8 +29,8 @@
 <% end %>
 </div>
 
-
 <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

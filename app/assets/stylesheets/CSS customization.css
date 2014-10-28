@@ -7,6 +7,10 @@
 	margin-left: auto;
 }
 
+.row .panel {
+	max-width: 450px;
+}
+
 /* Home Page */
 h1, h2, h3, h4 {
 	font-family: helvetica;
@@ -67,6 +71,7 @@ h1, h2, h3, h4 {
 	padding-right: 15px;
 }
 
+
 /* timestamp */
 
 .timestamp {
@@ -74,6 +79,7 @@ h1, h2, h3, h4 {
 	padding-left: 3px;
 	color: rgb(182, 182, 182)
 }
+
 
 /* image action icons */
 
@@ -90,6 +96,13 @@ h1, h2, h3, h4 {
 .show_actions a:hover, a:focus {
 	color: #818181;
 	text-decoration: none;
+}
+
+
+/* vertically resize textarea box */
+
+textarea {
+	resize: vertical;
 }
 
 

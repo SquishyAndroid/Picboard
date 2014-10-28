@@ -16,8 +16,8 @@ class PinsController < ApplicationController
   end
 
   def upvote
-    @pin = pin.find(params[:id])
-    @pin.upvote_by current_user
+    @pin = Pin.find(params[:id])
+    @pin.votes.create
     redirect_to pins_path
   end
 
