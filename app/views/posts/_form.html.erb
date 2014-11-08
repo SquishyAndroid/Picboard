@@ -1,10 +1,10 @@
-<%= form_for @pin, html: { multipart: true } do |f| %>
-  <% if @pin.errors.any? %>
+<%= form_for @post, html: { multipart: true } do |f| %>
+  <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
-      <% @pin.errors.full_messages.each do |msg| %>
+      <% @post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -24,7 +24,7 @@
   </div>
   <br />
   <div class="form-group">
-    <%= link_to 'Cancel', pins_path, class: "btn btn-default btn-lg" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.button "Create Post", class: "btn btn-danger btn-lg" %>
+    <%= link_to 'Cancel', posts_path, class: "btn btn-default btn-lg" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.button class: "btn btn-danger btn-lg" %>
   </div>
 <% end %>

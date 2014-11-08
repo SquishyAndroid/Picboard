@@ -1,4 +1,4 @@
-class Pin < ActiveRecord::Base
+class Post < ActiveRecord::Base
 	Paperclip.options[:command_path] = 'C:/Program Files/ImageMagick-6.8.9-Q16'
 	acts_as_votable
 	belongs_to :user

@@ -1,41 +1,41 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 
-<div id="pins">
-<% @pins.each do |pin| %>
+<div id="posts">
+<% @posts.each do |post| %>
   <div class="box panel panel-default">
-    <%= link_to image_tag(pin.image.url(:original)), pin %>
+    <%= link_to image_tag(post.image.url(:original)), post %>
     <div class="panel-body">
       <table>
         <tr>
-          <td rowspan="3"><div class="round-image-50"><%= image_tag(pin.user.avatar.url(:thumb)) %>
+          <td rowspan="3"><div class="round-image-50"><%= image_tag(post.user.avatar.url(:thumb)) %>
           </div></td>
-          <td><p><strong><%= pin.user.name if pin.user %></strong></p></td>
+          <td><p><strong><%= post.user.name if post.user %></strong></p></td>
         </tr>
         <tr>
-          <td><p><%= pin.description %></p></td>
+          <td><p><%= post.description %></p></td>
         </tr>
       </table>
-      <% if pin.user %>
+      <% if post.user %>
         <div class="show_actions">
-          <%= link_to edit_pin_path(@pin), class: "btn btn-default btn-xs" do%>
+          <%= link_to edit_post_path(@post), class: "btn btn-default btn-xs" do%>
             <span class="glyphicon glyphicon-comment"></span>
           <% end %>
-          <%= link_to like_pin_path(pin), method: :put, class: "btn btn-default btn-xs" do %> 
+          <%= link_to like_post_path(post), method: :put, class: "btn btn-default btn-xs" do %> 
             <span class="glyphicon glyphicon-heart"></span>
-            <%= pin.get_upvotes.size %>
+            <%= post.get_upvotes.size %>
           <% end %>
         </div>
       <% end %>
       <div class="timestamp">
-          <%= time_ago_in_words(pin.created_at) %> ago
+          <%= time_ago_in_words(post.created_at) %> ago
         </div>
     </div>
   </div>
 <% end %>
 </div>
 
-<%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
+<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 
 
 <script>
@@ -48,4 +48,3 @@
   ga('send', 'pageview');
 
 </script>
-
