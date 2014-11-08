@@ -18,7 +18,7 @@
       </table>
       <% if post.user %>
         <div class="show_actions">
-          <%= link_to edit_post_path(@post), class: "btn btn-default btn-xs" do%>
+          <%= link_to "#", class: "btn btn-default btn-xs" do%>
             <span class="glyphicon glyphicon-comment"></span>
           <% end %>
           <%= link_to like_post_path(post), method: :put, class: "btn btn-default btn-xs" do %> 
