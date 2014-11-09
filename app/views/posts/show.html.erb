@@ -1,5 +1,11 @@
 <div class="row">
 	<div class="col-md-offset-2 col-md-7">
+		<div class="post-navigation">
+			<div class="btn-group btn-group-sm">
+				<%= link_to "Previous", @post.previous, class: "btn btn-default" if @post.previous.present? %>
+				<%= link_to "Next", @post.next, class: "btn btn-default" if @post.next.present? %>
+	  	</div>
+	  </div>
 		<div class="panel panel-default">
 			<%= image_tag @post.image.url(:original) %>
 			<div class="panel-body">
@@ -12,13 +18,20 @@
 						<td><p><%= @post.description %></p></td>
 					</tr>
 				</table>
-				<% if @post.user == current_user %>
 				<div class="show_actions">
+					<% if @post.user == current_user %>
           <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
             <span class="glyphicon glyphicon-trash"></span>
           <% end %>
 					<%= link_to edit_post_path(@post), class: "btn btn-default, btn-xs" do %>
             <span class="glyphicon glyphicon-edit"></span>
+          <% end %>
+          <%= link_to "#", class: "btn btn-default btn-xs" do%>
+            <span class="glyphicon glyphicon-comment"></span>
+          <% end %>
+          <%= link_to like_post_path(@post), method: :put, class: "btn btn-default btn-xs" do %> 
+            <span class="glyphicon glyphicon-heart"></span>
+            <%= @post.get_upvotes.size %>
           <% end %>
         </div>
         <div class="timestamp">

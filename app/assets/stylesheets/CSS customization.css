@@ -1,14 +1,16 @@
-/* login and registration */
+/* Index Panel sizing */
 
 .panel-default {
-	max-width: 400px;
+	max-width: 500px;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 }
 
+/* Show Page Panel */
+
 .row .panel {
-	max-width: 450px;
+	max-width: 500px;
 }
 
 /* Home Page */
@@ -78,6 +80,20 @@ h1, h2, h3, h4 {
 	padding-top: 6px;
 	padding-left: 3px;
 	color: rgb(182, 182, 182)
+}
+
+
+/* post navigation buttons */
+
+.post-navigation {
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+
+.post-navigation .btn-sm, .btn-group-sm > .btn {
+	font-weight: bold;
+	color: #717171;
 }
 
 

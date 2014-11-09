@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 15)
+    @posts = Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -20,9 +20,8 @@ class PostsController < ApplicationController
   def upvote
     @post = Post.find(params[:id])
     @post.upvote_by current_user
-    redirect_to posts_path
+    redirect_to :back
   end
-
 
   def edit
   end
