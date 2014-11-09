@@ -20,12 +20,13 @@
 				</table>
 				<div class="show_actions">
 					<% if @post.user == current_user %>
-          <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
-            <span class="glyphicon glyphicon-trash"></span>
-          <% end %>
-					<%= link_to edit_post_path(@post), class: "btn btn-default, btn-xs" do %>
-            <span class="glyphicon glyphicon-edit"></span>
-          <% end %>
+	          <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
+	            <span class="glyphicon glyphicon-trash"></span>
+	          <% end %>
+						<%= link_to edit_post_path(@post), class: "btn btn-default, btn-xs" do %>
+	            <span class="glyphicon glyphicon-edit"></span>
+	          <% end %>
+	         <% end %>
           <%= link_to "#", class: "btn btn-default btn-xs" do%>
             <span class="glyphicon glyphicon-comment"></span>
           <% end %>
@@ -37,7 +38,6 @@
         <div class="timestamp">
 					<%= time_ago_in_words(@post.created_at) %> ago
 				</div>
-      <% end %>
 		</div>
 	</div>
 </div>
