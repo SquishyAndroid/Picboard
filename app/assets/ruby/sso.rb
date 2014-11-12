@@ -13,7 +13,7 @@ def get_disqus_sso(user)
       'id' => user['id'],
       'username' => user['username'],
       'email' => user['email']
-	  'avatar' => user['avatar'],
+	  #'avatar' => user['avatar'],
 	  #'url' => user['url']
     }.to_json
  
