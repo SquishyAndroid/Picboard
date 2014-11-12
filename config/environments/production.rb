@@ -80,7 +80,7 @@ Pinteresting::Application.configure do
 
   #Required for Heroku
   #Set to actual host
-  config.action_mailer.default_url_options = { :host => 'picboard' }
+  config.action_mailer.default_url_options = { :host => 'http://picboard.herokuapp.com/' }
 
   #Sets paperclip to upload images to Amazon S3
   config.paperclip_defaults = {
