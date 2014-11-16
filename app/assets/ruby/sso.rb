@@ -4,8 +4,8 @@ require 'cgi'
 require 'openssl'
 require "json"
  
-DISQUS_SECRET_KEY = 'jhOCZrgyOoxgBD3RvmQBIzfKnOmll9U7TxNdUxobWNHCcRo8oqNjubh7HQie4mEa'
-DISQUS_PUBLIC_KEY = '6BnWT0efR9SN6eDcg4mnHymNZKNKDsekR4CWAJh4PrnjcfM6E05vouYbBehIBFdh'
+DISQUS_SECRET_KEY = '<jhOCZrgyOoxgBD3RvmQBIzfKnOmll9U7TxNdUxobWNHCcRo8oqNjubh7HQie4mEa>'
+DISQUS_PUBLIC_KEY = '<6BnWT0efR9SN6eDcg4mnHymNZKNKDsekR4CWAJh4PrnjcfM6E05vouYbBehIBFdh>'
  
 def get_disqus_sso(user)
     # create a JSON packet of our data attributes
