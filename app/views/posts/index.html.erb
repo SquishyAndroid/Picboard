@@ -35,7 +35,7 @@
 </div>
 
 <div class = "paginate">
-  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @posts, :page_links => false, renderer: BootstrapPagination::Rails %>    
 </div>
 
 <script>
