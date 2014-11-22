@@ -17,7 +17,7 @@
       </table>
       <% if post.user %>
         <div class="show_actions">
-          <%= link_to "#", class: "btn btn-default btn-xs" do%>
+          <%= link_to post_path(post), class: "btn btn-default btn-xs" do%>
             <span class="glyphicon glyphicon-comment"></span>
             <%= post.comments.count %>
           <% end %>
