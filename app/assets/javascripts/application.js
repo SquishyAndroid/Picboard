@@ -12,7 +12,6 @@
 
 //= require jquery
 //= require bootstrap
-//= require disqus_sso_res
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require turbolinks

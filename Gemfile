@@ -18,6 +18,8 @@ gem 'will_paginate-bootstrap', '1.0.1'
 
 gem 'acts_as_votable', '~> 0.10.0'
 
+gem 'simple_form', '~>3.0.2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

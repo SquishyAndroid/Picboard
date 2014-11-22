@@ -1,0 +1,12 @@
+<%= div_for(comment) do %>
+  <div class="comments_wrapper clearfix">
+    <blockquote>
+      <div class="round-image-50"><%= image_tag(comment.user.avatar.url(:thumb)) %></div>
+      <p>
+        <strong style="font-size:14px"><%= comment.user.name %></strong>
+        <span class="text-muted" style="font-size:14px">•&nbsp;<%= time_ago_in_words(comment.created_at) %> ago</span>
+      </p>
+      <p><%= comment.body %></p>
+    </blockquote>
+  </div>
+<% end %>

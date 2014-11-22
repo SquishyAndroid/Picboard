@@ -1,12 +1,15 @@
 Pinteresting::Application.routes.draw do
-  resources :posts
 
   resources :posts do
     member do 
       put "like", to: "posts#upvote"
     end
+    resources :comments do
+      member do 
+        put "like", to: "comments#upvote"
+      end
+    end
   end
-
 
   devise_for :users
   root "posts#index"

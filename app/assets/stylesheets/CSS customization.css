@@ -165,16 +165,49 @@ textarea {
 
 
 /* Comment Styles */
-.Comments {
+
+.comment-main {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 500px;
+	padding-bottom: 50px;
 }
 
+.comment-form {
+	padding-bottom: 30px;
+}
+
+.comment-main .btn {
+	float: right;
+	margin-top: -10px;
+}
+
+blockquote {
+	padding: 0 20px !important;
+	margin: 15px 0 15px !important;
+	font-size: 17.5px !important;
+	border-left: 2px solid #eeeeee !important;
+
+}
+
+#comments .round-image-50 {
+	float: left;
+	margin-top: 5px;
+}
+
+
+/* pagination styles */
 .paginate {
 	text-align: center;
 }
 
+/* mobile comment styles */
+@media (min-width: 100px) and (max-width: 400px) {
+#comments .round-image-50 {
+	height: 35px;
+	width: 35px;
+}
+	}
 
 /* Responsive button sizes */
 @media (min-width: 100px) and (max-width: 400px) {
