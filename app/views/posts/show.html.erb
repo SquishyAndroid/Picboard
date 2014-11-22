@@ -27,7 +27,7 @@
 	            <span class="glyphicon glyphicon-edit"></span>
 	          <% end %>
 	        <% end %>
-          <%= link_to "#", class: "btn btn-default btn-xs" do%>
+          <%= link_to post_path(@post, anchor: 'comments' ), class: "btn btn-default btn-xs" do%>
             <span class="glyphicon glyphicon-comment"></span>
             <%= @post.comments.count %>
           <% end %>
