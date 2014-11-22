@@ -27,7 +27,7 @@
 	            <span class="glyphicon glyphicon-edit"></span>
 	          <% end %>
 	        <% end %>
-          <%= link_to post_path(@post, anchor: 'comments' ), class: "btn btn-default btn-xs" do%>
+          <%= link_to post_path(@post, anchor: 'comments' ), class: "btn btn-default btn-xs" do %>
             <span class="glyphicon glyphicon-comment"></span>
             <%= @post.comments.count %>
           <% end %>
@@ -61,7 +61,9 @@
 			    <%= f.text_area :body, class: "form-control", placeholder: "Join the discussion..." %>
 			  </div>
 			  <br>
-			  <%= f.submit "Post Comment", class: "btn btn-danger" %>
+			  <div class = "form-footer">
+			  	<%= f.submit "Post Comment", class: "btn btn-danger" %>
+			  </div>
 			<% end %>
 		</div>
 		<div id="comments">
@@ -72,7 +74,13 @@
 			<br>
 			<p class="text-muted" style="text-align:center">No comments yet. Be the first!</p>
 		<% end %>
-
+		<br>
+		<div class = "back-button">
+			<%= link_to posts_path, class: "btn btn-default btn-sm" do %>
+				<span class="glyphicon glyphicon-arrow-left"></span>
+				Back to posts
+		  <% end %>
+		</div>
 	</div>
 </div>
 

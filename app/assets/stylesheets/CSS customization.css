@@ -138,16 +138,6 @@ textarea {
 }
 
 
-/* remove zooming on input screens */
-	@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  select:focus,
-  textarea:focus,
-  input:focus {
-    font-size: 16px;
-    background: #eee;
-  }
-}
-
 /* User Avatar */
 
 .round-image-50 {
@@ -174,7 +164,7 @@ textarea {
 }
 
 .comment-form {
-	padding-bottom: 30px;
+	padding-bottom: 35px;
 }
 
 .comment-main .btn {
@@ -195,10 +185,29 @@ blockquote {
 	margin-top: 5px;
 }
 
+.back-button {
+	border-radius: 4px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	float: left;
+}
+
 
 /* pagination styles */
 .paginate {
 	text-align: center;
+}
+
+
+
+/* remove zooming on mobile input screens */
+	@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+    background: #eee;
+  }
 }
 
 /* mobile comment styles */
