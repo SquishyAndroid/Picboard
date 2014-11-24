@@ -216,6 +216,9 @@ blockquote {
 	height: 35px;
 	width: 35px;
 }
+span.text-muted {
+	display:block;
+}
 	}
 
 /* Responsive button sizes */
