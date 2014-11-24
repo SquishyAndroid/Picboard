@@ -192,6 +192,10 @@ blockquote {
 	float: left;
 }
 
+.back-button .btn {
+	color: #777777; 
+}
+
 
 /* pagination styles */
 .paginate {
