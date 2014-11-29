@@ -87,14 +87,6 @@ h1, h2, h3, h4 {
 }
 
 
-/* timestamp */
-
-.timestamp {
-	padding-top: 6px;
-	padding-left: 3px;
-	color: rgb(182, 182, 182)
-}
-
 
 /* post navigation buttons */
 
@@ -128,6 +120,21 @@ h1, h2, h3, h4 {
 .show_actions a:hover, a:focus {
 	color: #818181;
 	text-decoration: none;
+}
+
+
+span.like-count {
+	font-family: helvetica;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/* timestamp */
+
+.timestamp {
+	padding-top: 6px;
+	padding-left: 3px;
+	color: rgb(182, 182, 182)
 }
 
 

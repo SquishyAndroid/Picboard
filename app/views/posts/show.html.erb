@@ -31,9 +31,9 @@
             <span class="glyphicon glyphicon-comment"></span>
             <%= @post.comments.count %>
           <% end %>
-          <%= link_to like_post_path(@post), method: :put, class: "btn btn-default btn-xs" do %> 
+          <%= link_to like_post_path(@post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
             <span class="glyphicon glyphicon-heart"></span>
-            <%= @post.get_upvotes.size %>
+              <span class="like-count"><%= @post.get_upvotes.size %></span>
           <% end %>
         </div>
         <div class="timestamp">
@@ -78,7 +78,15 @@
 </div>
 
 
+<script>
 
+  $('.btn')
+    .on('ajax:send', function () { $(this).addClass('loading'); })
+    .on('ajax:complete', function () { $(this).removeClass('loading'); })
+    .on('ajax:error',  function(e, xhr, status, error) { console.log(status); console.log(error); })
+    .on('ajax:success', function (e, data, status, xhr) { $("span.like-count").html(data.count); });
+    
+</script>
 
 
 

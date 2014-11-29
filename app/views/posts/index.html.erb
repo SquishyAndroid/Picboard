@@ -21,9 +21,9 @@
             <span class="glyphicon glyphicon-comment"></span>
             <%= post.comments.count %>
           <% end %>
-          <%= link_to like_post_path(post), method: :put, class: "btn btn-default btn-xs" do %> 
+          <%= link_to like_post_path(post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
             <span class="glyphicon glyphicon-heart"></span>
-            <%= post.get_upvotes.size %>
+              <span class="like-count"><%= post.get_upvotes.size %></span>
           <% end %>
         </div>
       <% end %>
@@ -38,6 +38,17 @@
 <div class = "paginate">
   <%= will_paginate @posts, :page_links => false, renderer: BootstrapPagination::Rails %>    
 </div>
+
+
+<script>
+
+  $('.btn')
+    .on('ajax:send', function () { $(this).addClass('loading'); })
+    .on('ajax:complete', function () { $(this).removeClass('loading'); })
+    .on('ajax:error',  function(e, xhr, status, error) { console.log(status); console.log(error); })
+    .on('ajax:success', function (e, data, status, xhr) { $("span.like-count").html(data.count); });
+    
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
