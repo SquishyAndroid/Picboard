@@ -184,7 +184,10 @@ blockquote {
 	margin: 15px 0 15px !important;
 	font-size: 17.5px !important;
 	border-left: 2px solid #eeeeee !important;
+}
 
+.comments-wrapper {
+	padding-bottom: 5px;
 }
 
 #comments .round-image-50 {

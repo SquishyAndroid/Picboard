@@ -1,6 +1,5 @@
 <%= div_for(comment) do %>
-  <div class="comments_wrapper clearfix">
-    <blockquote>
+  <div class="comments-wrapper">
       <div class="round-image-50"><%= image_tag(comment.user.avatar.url(:thumb)) %></div>
       <p>
         <strong style="font-size:14px"><%= comment.user.name %></strong>
@@ -11,6 +10,5 @@
           <span style="float:right;font-size:13px"><%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" } %></span>
         <% end %>
       </p>
-    </blockquote>
   </div>
 <% end %>
