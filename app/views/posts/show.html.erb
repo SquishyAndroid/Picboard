@@ -1,80 +1,78 @@
 <div class="row">
-	<div class="col-md-offset-2 col-md-7">
-		<div class="post-navigation">
-			<div class="btn-group btn-group-sm">
-				<%= link_to "Previous", @post.previous, class: "btn btn-default" if @post.previous.present? %>
-				<%= link_to "Next", @post.next, class: "btn btn-default" if @post.next.present? %>
-	  	</div>
-	  </div>
-		<div class="panel panel-default">
-			<%= image_tag @post.image.url(:original) %>
-			<div class="panel-body">
-				<table>
-					<tr>
-						<td rowspan="3"><div class="round-image-50"><%= image_tag(@post.user.avatar.url(:thumb)) %></div></td>
-						<td><p><strong><%= @post.user.name if @post.user %></strong></p></td>
-					</tr>
-					<tr>
-						<td><p><%= @post.description %></p></td>
-					</tr>
-				</table>
-				<div class="show_actions">
-					<% if @post.user == current_user %>
-	          <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
-	            <span class="glyphicon glyphicon-trash"></span>
-	          <% end %>
-						<%= link_to edit_post_path(@post), class: "btn btn-default, btn-xs" do %>
-	            <span class="glyphicon glyphicon-edit"></span>
-	          <% end %>
-	        <% end %>
-          <%= link_to post_path(@post, anchor: 'comments' ), class: "btn btn-default btn-xs" do %>
-            <span class="glyphicon glyphicon-comment"></span>
-            <%= @post.comments.count %>
+	<div class="post-navigation">
+		<div class="btn-group btn-group-sm">
+			<%= link_to "Previous", @post.previous, class: "btn btn-default" if @post.previous.present? %>
+			<%= link_to "Next", @post.next, class: "btn btn-default" if @post.next.present? %>
+  	</div>
+  </div>
+	<div class="panel panel-default">
+		<%= image_tag @post.image.url(:original) %>
+		<div class="panel-body">
+			<table>
+				<tr>
+					<td rowspan="3"><div class="round-image-50"><%= image_tag(@post.user.avatar.url(:thumb)) %></div></td>
+					<td><p><strong><%= @post.user.name if @post.user %></strong></p></td>
+				</tr>
+				<tr>
+					<td><p><%= @post.description %></p></td>
+				</tr>
+			</table>
+			<div class="show_actions">
+				<% if @post.user == current_user %>
+          <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
+            <span class="glyphicon glyphicon-trash"></span>
           <% end %>
-          <%= link_to like_post_path(@post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
-            <span class="glyphicon glyphicon-heart"></span>
-              <span class="like-count"><%= @post.get_upvotes.size %></span>
+					<%= link_to edit_post_path(@post), class: "btn btn-default, btn-xs" do %>
+            <span class="glyphicon glyphicon-edit"></span>
           <% end %>
-        </div>
-        <div class="timestamp">
-					<%= time_ago_in_words(@post.created_at) %> ago
-				</div>
-		</div>
+        <% end %>
+        <%= link_to post_path(@post, anchor: 'comments' ), class: "btn btn-default btn-xs" do %>
+          <span class="glyphicon glyphicon-comment"></span>
+          <%= @post.comments.count %>
+        <% end %>
+        <%= link_to like_post_path(@post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
+          <span class="glyphicon glyphicon-heart"></span>
+            <span class="like-count"><%= @post.get_upvotes.size %></span>
+        <% end %>
+      </div>
+      <div class="timestamp">
+				<%= time_ago_in_words(@post.created_at) %> ago
+			</div>
 	</div>
-	<div class="comment-main">
-		<div class="comment-form">
-			<h5>
-			  <% if @post.comments.count == 1 %> 
-			  	<strong><%= @post.comments.count %> Comment</strong>
-			  <% else %>
-			  	<strong><%= @post.comments.count %> Comments</strong>
-			  <% end %>
-			  <span class = "text-muted" style = "float:right" > <% if user_signed_in? %>
-			  	<strong><%= current_user.name %></strong>
-			  	<% else %>
-			  		<%= link_to "Sign in to comment", new_user_session_path %>
-			  	<% end %>
-			  </span>
-			</h5>
-			<%= simple_form_for [@post, Comment.new]  do |f| %>
-			  <div class="field">
-			    <%= f.text_area :body, class: "form-control", placeholder: "Join the discussion..." %>
-			  </div>
-			  <br>
-			  <div class = "form-footer">
-			  	<%= f.submit "Post Comment", class: "btn btn-danger" %>
-			  </div>
-			<% end %>
-		</div>
-		<div id="comments">
-		  <%= render :partial => @post.comments %>
-		</div>
-
-		<% if @post.comments.count == 0 %>
-			<br>
-			<p class="text-muted" style="text-align:center">No comments yet. Be the first!</p>
+</div>
+<div class="comment-main">
+	<div class="comment-form">
+		<h5>
+		  <% if @post.comments.count == 1 %> 
+		  	<strong><%= @post.comments.count %> Comment</strong>
+		  <% else %>
+		  	<strong><%= @post.comments.count %> Comments</strong>
+		  <% end %>
+		  <span class = "text-muted" style = "float:right" > <% if user_signed_in? %>
+		  	<strong><%= current_user.name %></strong>
+		  	<% else %>
+		  		<%= link_to "Sign in to comment", new_user_session_path %>
+		  	<% end %>
+		  </span>
+		</h5>
+		<%= simple_form_for [@post, Comment.new]  do |f| %>
+		  <div class="field">
+		    <%= f.text_area :body, class: "form-control", placeholder: "Join the discussion..." %>
+		  </div>
+		  <br>
+		  <div class = "form-footer">
+		  	<%= f.submit "Post Comment", class: "btn btn-danger" %>
+		  </div>
 		<% end %>
 	</div>
+	<div id="comments">
+	  <%= render :partial => @post.comments %>
+	</div>
+
+	<% if @post.comments.count == 0 %>
+		<br>
+		<p class="text-muted" style="text-align:center">No comments yet. Be the first!</p>
+	<% end %>
 </div>
 
 
