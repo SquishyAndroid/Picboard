@@ -13,6 +13,11 @@
 	max-width: 500px;
 }
 
+.row {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 
 /* Form Styles */
 
