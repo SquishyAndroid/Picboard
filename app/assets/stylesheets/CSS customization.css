@@ -16,7 +16,11 @@ h1, h2, h3, h4 {
 
 .jumbotron {
 	border: 1px solid rgb(236,236,236);
-	padding-bottom: 10px;
+	padding-top: 10px !important;
+	padding-right: 10px !important;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .jumbotron h1 {
@@ -28,6 +32,16 @@ h1, h2, h3, h4 {
 .jumbotron p {
 	padding-left: 5px;
 	font-weight: light;
+}
+
+.jumbotron .fa-times {
+	float: right;
+	color: rgb(150, 150, 150);
+}
+
+.jumbotron .fa-times:hover {
+	color: rgb(76, 76, 76);
+	cursor: pointer;
 }
 
 /* Index Panel sizing */
@@ -289,6 +303,10 @@ span.text-muted {
 @media (min-width: 100px) and (max-width: 400px) {
 .jumbotron h1 {
 	text-align: center;
+}
+.jumbotron {
+	width: 285px;
+	padding-left: 10px !important;
 }
 	}
 

@@ -1,7 +1,8 @@
 <div class="jumbotron">
-<h1>Welcome to <span style="color:#d9534f">Pic</span>board</h1>
+	<i class="fa fa-times fa-2x"></i>
+	<br>
+<h1>Welcome to <span style="color:#d9534f">Pix</span>bored</h1>
 <p>Browse and upload great pics and gifs!</p>
-
 <% if user_signed_in? %>
 <% else %>
 <p>
@@ -9,5 +10,10 @@
 <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger btn-lg" %>
 </p>
 <% end %>
-
 </div>
+
+<script>
+		$('.fa-times').click(function(event){
+      $('.jumbotron').delay(300).fadeOut(300);
+    });
+</script>
