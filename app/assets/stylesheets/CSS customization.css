@@ -1,30 +1,3 @@
-/* Index Panel sizing */
-
-.panel-default {
-	max-width: 500px;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}
-
-/* Show Page Panel */
-
-.row .panel {
-	max-width: 500px;
-}
-
-
-/* Form Styles */
-
-.panel-default > .panel-heading {
-	border-color: transparent !important;
-	padding-bottom: 0px;
-}
-
-.panel-heading p {
-	color: rgb(148, 148, 148);
-}
-
 
 /* Home Page */
 h1, h2, h3, h4 {
@@ -55,6 +28,38 @@ h1, h2, h3, h4 {
 .jumbotron p {
 	padding-left: 5px;
 	font-weight: light;
+}
+
+/* Index Panel sizing */
+
+.panel-default {
+	max-width: 500px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* Form Styles */
+
+.panel-default > .panel-heading {
+	border-color: transparent !important;
+	padding-bottom: 0px;
+}
+
+.panel-heading p {
+	color: rgb(148, 148, 148);
+}
+
+/* Show Page Panel */
+
+.row {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.row .panel {
+	max-width: 500px;
 }
 
 
@@ -170,13 +175,12 @@ textarea {
 	padding-bottom: 50px;
 }
 
-.comment-form {
-	padding-bottom: 35px;
+.field {
+	padding-bottom: 5px;
 }
 
-.comment-main .btn {
+.comment-main .btn-danger {
 	float: right;
-	margin-top: -10px;
 }
 
 blockquote {
@@ -188,11 +192,21 @@ blockquote {
 
 .comments-wrapper {
 	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+.comments-wrapper p {
+	padding-left: 60px;
 }
 
 #comments .round-image-50 {
 	float: left;
 	margin-top: 5px;
+}
+
+.form-footer {
+	padding-bottom: 50px;
+	display: none;
 }
 
 .back-button {
@@ -206,12 +220,31 @@ blockquote {
 	color: #777777; 
 }
 
+.form-footer .btn-sm {
+	padding: 2px;
+	background-color:transparent;
+	border-color: transparent;
+	color: rgba(128, 128, 128, 0.95);
+	float:left;
+}
+
+.form-footer .btn-sm:hover .btn-sm:focus {
+	background-color:transparent !important;
+	border-color: transparent !important;
+	color: black !important;
+}
+
+/* Comment Image Styles */
+
+.comment-image img {
+	border-radius: 4px;
+}
+
 
 /* pagination styles */
 .paginate {
 	text-align: center;
 }
-
 
 
 /* remove zooming on mobile input screens */
@@ -233,6 +266,13 @@ blockquote {
 span.text-muted {
 	display:block;
 }
+
+.comment-main .btn-danger {
+	float: right;
+}
+.comments-wrapper p {
+	padding-left: 0px;
+}
 	}
 
 /* Responsive button sizes */
@@ -252,3 +292,7 @@ span.text-muted {
 	text-align: center;
 }
 	}
+
+span.file-input {
+	display: none;
+}

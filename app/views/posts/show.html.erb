@@ -59,8 +59,13 @@
 		  <div class="field">
 		    <%= f.text_area :body, class: "form-control", placeholder: "Join the discussion..." %>
 		  </div>
-		  <br>
+		  <span class="file-input" >
+		  		<%= f.file_field :image, class: "form-control" %>
+		  	</span>
 		  <div class = "form-footer">
+		  	<button type="button" class="btn btn-sm btn-default">
+		  		<span><i class="fa fa-picture-o fa-2x"></i></span>
+		  	</button>
 		  	<%= f.submit "Post Comment", class: "btn btn-danger" %>
 		  </div>
 		<% end %>
@@ -75,17 +80,24 @@
 	<% end %>
 </div>
 
-
 <script>
-
   $('.btn')
     .on('ajax:send', function () { $(this).addClass('loading'); })
     .on('ajax:complete', function () { $(this).removeClass('loading'); })
     .on('ajax:error',  function(e, xhr, status, error) { console.log(status); console.log(error); })
-    .on('ajax:success', function (e, data, status, xhr) {  $(this).find("span.like-count").html(data.count); });
-    
+    .on('ajax:success', function (e, data, status, xhr) {  $(this).find("span.like-count").html(data.count); });   
 </script>
 
 
+<script>
+		$('.field').click(function(event){
+      $('.form-footer').show();
+    });
+
+    $('button').click(function(event){
+      $('span.file-input').toggle();
+      $('.form-footer').css('padding-top','5px')
+    });
+</script>
 
 
