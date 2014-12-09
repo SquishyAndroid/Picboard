@@ -25,7 +25,11 @@
 		  </div>
 
 		  <div class = "form-group">
-		  	<%= f.submit "Sign up", class: "btn btn-lg btn-danger btn-responsive" %>
+		  	<p class ="agreement">
+		  		By registering you agree to our 
+		  			<%= link_to "Terms of Service", terms_of_service_path %>
+		  	</p>
+		  		<%= f.submit "Sign up", class: "btn btn-lg btn-danger btn-responsive" %>
 		  </div>
 		<% end %>
 	</div>

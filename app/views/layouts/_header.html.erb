@@ -18,17 +18,16 @@
 
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li><%= link_to new_post_path do %>
-            <span class="glyphicon glyphicon-picture"></span> Upload
-            <% end %>
+          <li>
+            <%= link_to new_post_path, class: "upload-button" do %>
+                <span class="glyphicon glyphicon-picture"></span> Upload
+              <% end %>
           </li>
           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-          <% end %>
-          <li><%= link_to "About", about_path %></li>
-          <% if user_signed_in? %>
             <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
           <li><%= link_to "Log In", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path, class: "signup-button" %></li>
           <% end %>
         </ul>
     </div><!-- /.navbar-collapse -->

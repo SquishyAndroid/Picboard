@@ -14,6 +14,7 @@ Pinteresting::Application.routes.draw do
   devise_for :users
   root "posts#index"
   get "about" => "pages#about"
+  get "terms_of_service" => "pages#terms_of_service"
 
   
   # The priority is based upon order of creation: first created -> highest priority.
