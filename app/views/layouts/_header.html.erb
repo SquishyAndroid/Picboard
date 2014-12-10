@@ -9,8 +9,10 @@
         <span class="icon-bar"></span>
       </button>
 
-      <div class="navbar-brand"><%= link_to "Pixbored", root_path %></div>
-
+      <div class="navbar-brand"><%= link_to root_path do %>
+        <span><img src="https://s3.amazonaws.com/pixbored-assets/pixbored_small_border.png"></span>
+        <% end %>
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

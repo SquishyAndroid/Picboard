@@ -26,19 +26,35 @@
 	background-color: #F4716E !important;
 }
 
+/* Navbar Styles */
+
+.navbar {
+	border-radius: 0px !important;
+	border-color: rgba(255, 255, 255, 0.8) !important;
+	box-shadow: 1px 2px 8px rgba(142, 142, 142, 0.72);
+}
+
+.navbar-toggle {
+	border-color: transparent !important;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+	background-color: transparent !important;
+}
+
+
+.navbar-brand {
+	padding: 5px 10px 10px 15px !important;
+}
+
+.navbar-brand img {
+	height: 40px;
+}
+
+
 /* Home Page */
 h1, h2, h3, h4 {
 	font-family: helvetica;
-}
-
-.navbar-brand a {
-	color: #d9534f;
-	font-weight: bold;
-}
-
-.navbar-brand a:hover, a:focus {
-	color: #d9534f;
-	text-decoration: none;
 }
 
 .jumbotron {
