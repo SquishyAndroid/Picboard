@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	Paperclip.options[:command_path] = 'C:/Program Files/ImageMagick-6.8.9-Q16'
+	Paperclip.options.merge!(:command_path => 'C:/Program Files/ImageMagick-6.8.9-Q16')
 	acts_as_votable
 	belongs_to :user
 	has_many :comments, :order => 'created_at DESC'
