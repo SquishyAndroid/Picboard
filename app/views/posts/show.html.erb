@@ -55,6 +55,7 @@
 		  	<% end %>
 		  </span>
 		</h5>
+
 		<%= simple_form_for [@post, Comment.new]  do |f| %>
 		  <div class="field">
 		    <%= f.text_area :body, class: "form-control", placeholder: "Join the discussion..." %>

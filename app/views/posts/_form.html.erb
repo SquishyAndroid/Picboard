@@ -18,7 +18,7 @@
   <div class="form-group">
     <div class="textarea">
     <%= f.label :Caption %>
-    <%= f.text_area :description, class: "form-control", placeholder: "Add a caption" %>
+    <%= f.text_area :description, :maxlength => 140, class: "form-control", placeholder: "Add a caption" %>
     </div>
   </div>
   <br />
