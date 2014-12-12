@@ -135,13 +135,21 @@ h1, h2, h3, h4 {
 
 .terms {
 	background-color: white;
-	padding: 20px;
+	padding: 20px 130px 20px 80px;
 	border: 1px solid rgb(228, 228, 228);
 	border-radius: 4px;
+	width: 850px;
 }
 
 .agreement {
 	padding-bottom: 10px;
+	padding-top: 10px;
+	color: rgb(84, 84, 84);
+	font-size: 15px;
+}
+
+.terms-footer {
+	text-align: center !important;
 }
 
 /* Account Settings Page */
