@@ -1,13 +1,34 @@
+
+/* Navbar Styles */
+
+.navbar {
+	border-radius: 0px !important;
+	border-color: rgba(255, 255, 255, 0.8) !important;
+	box-shadow: 1px 2px 8px rgba(142, 142, 142, 0.72);
+}
+
+.navbar-toggle {
+	border-color: transparent !important;
+}
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+	background-color: transparent !important;
+}
+
+.navbar-brand {
+	padding: 5px 10px 10px 15px !important;
+}
+
+.navbar-brand img {
+	height: 40px;
+}
+
 .upload-button {
 	background-color: #d9534f;
 	color: white !important;
 	border-radius: 3px;
 	padding: 10px !important;
 	margin-top: 5px;
-}
-
-.form-control {
-	height: initial !important;
 }
 
 .upload-button:hover {
@@ -28,31 +49,6 @@
 
 .signup-button:hover {
 	background-color: #F4716E !important;
-}
-
-/* Navbar Styles */
-
-.navbar {
-	border-radius: 0px !important;
-	border-color: rgba(255, 255, 255, 0.8) !important;
-	box-shadow: 1px 2px 8px rgba(142, 142, 142, 0.72);
-}
-
-.navbar-toggle {
-	border-color: transparent !important;
-}
-
-.navbar-toggle:hover, .navbar-toggle:focus {
-	background-color: transparent !important;
-}
-
-
-.navbar-brand {
-	padding: 5px 10px 10px 15px !important;
-}
-
-.navbar-brand img {
-	height: 40px;
 }
 
 
@@ -172,13 +168,18 @@ h1, h2, h3, h4 {
 	margin-bottom: 10px;
 }
 
-
 .actions a {
 	padding-top: 10px;
 	padding-right: 15px;
 }
 
+.form-control {
+	height: initial !important;
+}
 
+.panel-title h2, h3 {
+	color: white !important;
+}
 
 /* post navigation buttons */
 
