@@ -11,10 +11,10 @@
 			<table>
 				<tr>
 					<td rowspan="3"><div class="round-image-50"><%= image_tag(@post.user.avatar.url(:thumb)) %></div></td>
-					<td><p<strong itemprop="author"><%= @post.user.name if @post.user %></strong></p></td>
+					<td><p><strong itemprop="author"><%= @post.user.name if @post.user %></strong></p></td>
 				</tr>
 				<tr>
-					<td><p itemprop="name"><%= @post.description %></p></td>
+					<td><p itemprop="name"><%= @post.description %><p></td>
 				</tr>
 			</table>
 			<div class="show_actions">
