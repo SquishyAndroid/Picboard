@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pixbored</title>
+  <title>Pixbored - Laugh Hard. Work Less</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="mxH-Jb7SZD8hx6Ff_z8foZ_kRno17Sl1-wda2MTtRps" />
   <meta name="google-site-verification" content="bBv6WJXX7R7kogAh-NpDsLgY1nwOLdRauigPQW8H6R4" />
-  <meta name="description" content="Pixbored is your destination for funny pictures, gifs and more - laugh hard, work less">
+  <meta name="description" content="Pixbored is your destination for funny pictures, gifs and more">
   <meta property="og:site_name" content="Pixbored" />
   <meta property="og:title" content="Laugh Hard. Work Less." />
   <meta property="og:description" content="Your community for funny user submitted pics, gifs and more!" />
@@ -29,8 +30,6 @@
 
 		<%= yield %>
 	</div>
-
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
 
