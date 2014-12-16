@@ -1,4 +1,4 @@
-<div class="row">
+<div itemprop="BlogPosting" class="row">
 	<div class="post-navigation">
 		<div class="btn-group btn-group-sm">
 			<%= link_to "Previous", @post.previous, class: "btn btn-default" if @post.previous.present? %>
@@ -11,10 +11,10 @@
 			<table>
 				<tr>
 					<td rowspan="3"><div class="round-image-50"><%= image_tag(@post.user.avatar.url(:thumb)) %></div></td>
-					<td><p><strong><%= @post.user.name if @post.user %></strong></p></td>
+					<td><p><strong itemprop="author"><%= @post.user.name if @post.user %></strong></p></td>
 				</tr>
 				<tr>
-					<td><p><%= @post.description %></p></td>
+					<td><p itemprop="name"><%= @post.description %></p></td>
 				</tr>
 			</table>
 			<div class="show_actions">
@@ -71,7 +71,7 @@
 		  </div>
 		<% end %>
 	</div>
-	<div id="comments">
+	<div itemprop="UserComments" id="comments">
 	  <%= render :partial => @post.comments %>
 	</div>
 
