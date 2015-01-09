@@ -14,7 +14,7 @@
           </p></td>
         </tr>
         <tr>
-          <td><h4 itemprop="name"><%= post.description %></h4></td>
+          <td><p itemprop="name"><%= post.description %></p></td>
         </tr>
       </table>
       <% if post.user %>
@@ -50,6 +50,22 @@
     .on('ajax:error',  function(e, xhr, status, error) { console.log(status); console.log(error); })
     .on('ajax:success', function (e, data, status, xhr) { $(this).find("span.like-count").html(data.count); });
     
+</script>
+
+<script>
+function freeze_gif(i) {
+    var c = document.createElement('canvas');
+    var w = c.width = i.width;
+    var h = c.height = i.height;
+    c.getContext('2d').drawImage(i, 0, 0, w, h);
+    try {
+        i.src = c.toDataURL("image/gif"); // if possible, retain all css aspects
+    } catch(e) { // cross-domain -- mimic original with all its tag attributes
+        for (var j = 0, a; a = i.attributes[j]; j++)
+            c.setAttribute(a.name, a.value);
+        i.parentNode.replaceChild(c, i);
+    }
+}
 </script>
 
 <script>

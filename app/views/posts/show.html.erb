@@ -14,7 +14,7 @@
 					<td><p><strong itemprop="author"><%= @post.user.name if @post.user %></strong></p></td>
 				</tr>
 				<tr>
-					<td><h4 itemprop="name"><%= @post.description %></h4></td>
+					<td><p itemprop="name"><%= @post.description %></p></td>
 				</tr>
 			</table>
 			<div class="show_actions">
@@ -89,7 +89,6 @@
     .on('ajax:success', function (e, data, status, xhr) {  $(this).find("span.like-count").html(data.count); });   
 </script>
 
-
 <script>
 		$('.field').click(function(event){
       $('.form-footer').show();
@@ -100,5 +99,3 @@
       $('.form-footer').css('padding-top','5px')
     });
 </script>
-
-

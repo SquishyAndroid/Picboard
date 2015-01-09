@@ -27,6 +27,8 @@ GEM
       tzinfo (~> 0.3.37)
     acts_as_votable (0.10.0)
     arel (4.0.2)
+    av (0.7.1)
+      cocaine
     aws-sdk (1.20.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4, < 1.6.0)
@@ -76,6 +78,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.10.1)
+    nokogiri (1.5.11)
     nokogiri (1.5.11-x86-mingw32)
     orm_adapter (0.5.0)
     paperclip (3.5.4)
@@ -83,6 +86,9 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip-av-transcoder (0.6.2)
+      av (>= 0.7.1)
+      paperclip (>= 2.5.2)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -164,6 +170,7 @@ DEPENDENCIES
   jquery-turbolinks
   masonry-rails (~> 0.2.0)
   paperclip (~> 3.0)
+  paperclip-av-transcoder
   pg
   rails (= 4.0.0)
   rails_12factor
