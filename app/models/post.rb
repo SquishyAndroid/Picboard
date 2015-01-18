@@ -8,7 +8,6 @@ class Post < ActiveRecord::Base
 	validates :image, presence: true
 	
 
-
 	def next
   	Post.where(["id < ?", id]).order(:id).last
 	end

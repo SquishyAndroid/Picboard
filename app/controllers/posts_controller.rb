@@ -17,13 +17,23 @@ class PostsController < ApplicationController
     @post = current_user.posts.build
   end
 
-  def upvote
+  def like
     @post = Post.find(params[:id])
-    @post.upvote_by current_user
+    @post.liked_by current_user
 
     respond_to do |format|
       format.html {redirect_to :back }
-      format.json { render json: { count: @post.get_upvotes.size } }
+      format.json { render json: { count: @post.get_upvotes.size, id: params[:id] } }
+    end
+  end
+
+  def dislike
+    @post = Post.find(params[:id])
+    @post.disliked_by current_user
+
+    respond_to do |format|
+      format.html {redirect_to :back }
+      format.json { render json: { count: @post.get_upvotes.size, id: params[:id] } }
     end
   end
 

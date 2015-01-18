@@ -14,7 +14,7 @@
           </p></td>
         </tr>
         <tr>
-          <td><p itemprop="name"><%= post.description %></p></td>
+          <td><p itemprop= "name"><%= post.description %></p></td>
         </tr>
       </table>
       <% if post.user %>
@@ -23,9 +23,23 @@
             <span class="glyphicon glyphicon-comment"></span>
             <%= post.comments.count %>
           <% end %>
-          <%= link_to like_post_path(post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
-            <span class="glyphicon glyphicon-heart"></span>
-              <span class="like-count"><%= post.get_upvotes.size %></span>
+          <% if user_signed_in? %>
+            <% if current_user.liked?(post) %>
+              <%= link_to dislike_post_path(post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
+                <span class="glyphicon glyphicon-heart" style="color:#d41b1b"></span>
+                  <span class="like-count"><%= post.get_upvotes.size %></span>
+              <% end %>
+            <% else %>
+              <%= link_to like_post_path(post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
+                <span class="glyphicon glyphicon-heart"></span>
+                  <span class="like-count"><%= post.get_upvotes.size %></span>
+              <% end %>
+            <% end %>
+          <% else %>
+            <%= link_to dislike_post_path(post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
+              <span class="glyphicon glyphicon-heart"></span>
+                <span class="like-count"><%= post.get_upvotes.size %></span>
+            <% end %>
           <% end %>
         </div>
       <% end %>
@@ -43,27 +57,13 @@
 
 
 <script>
-
-  $('.btn')
+  $(".btn")
     .on('ajax:success', function (e, data, status, xhr) { $(this).find("span.like-count").html(data.count); });
-    
+    $('.glyphicon-heart').click(function(){
+        $(this).css("color","#d41b1b");
+    });
 </script>
 
-<script>
-function freeze_gif(i) {
-    var c = document.createElement('canvas');
-    var w = c.width = i.width;
-    var h = c.height = i.height;
-    c.getContext('2d').drawImage(i, 0, 0, w, h);
-    try {
-        i.src = c.toDataURL("image/gif"); // if possible, retain all css aspects
-    } catch(e) { // cross-domain -- mimic original with all its tag attributes
-        for (var j = 0, a; a = i.attributes[j]; j++)
-            c.setAttribute(a.name, a.value);
-        i.parentNode.replaceChild(c, i);
-    }
-}
-</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -73,5 +73,4 @@ function freeze_gif(i) {
 
   ga('create', 'UA-55978328-1', 'auto');
   ga('send', 'pageview');
-
 </script>
