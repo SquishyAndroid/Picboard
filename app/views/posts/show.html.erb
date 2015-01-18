@@ -34,7 +34,7 @@
 	        <% if current_user.liked?(@post) %>
 		       	<%= link_to dislike_post_path(@post), method: :put, remote: true, data: { type: :json, toggle_href: like_post_path(@post), id: @post.id }, class: "btn btn-default btn-xs" do %>
 		          <span class="glyphicon glyphicon-heart" style="color:#d41b1b"></span>
-		            <span class="like-count"><%= @post.get_upvotes.size %></span>
+		            <span class="like-count" style="color:rgba(51, 51, 51, 0.68)"><%= @post.get_upvotes.size %></span>
 		        <% end %>
 		      <% else %>
 		        <%= link_to like_post_path(@post), method: :put, remote: true, data: { type: :json, toggle_href: dislike_post_path(@post), id: @post.id }, class: "btn btn-default btn-xs" do %>
