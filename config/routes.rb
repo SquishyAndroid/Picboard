@@ -1,4 +1,5 @@
 Pinteresting::Application.routes.draw do
+  get 'tags/:tag', to: 'posts#index', as: :tag
 
   resources :posts do
     member do 
@@ -17,7 +18,6 @@ Pinteresting::Application.routes.draw do
   get "about" => "pages#about"
   get "terms_of_service" => "pages#terms_of_service"
   get "copyright_policy" => "pages#copyright_policy"
-
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

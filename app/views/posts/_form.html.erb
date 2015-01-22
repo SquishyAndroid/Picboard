@@ -21,6 +21,10 @@
     <%= f.text_area :description, :maxlength => 140, class: "form-control", placeholder: "Add a caption" %>
     </div>
   </div>
+  <div class="form-group">
+    <%= f.label :tag_list, "Tags" %>
+    <%= f.text_field :tag_list, class: "form-control", placeholder: "Seperate tags by commas", autofocus: true %>
+  </div>
   <br />
   <div class="form-group">
     <%= link_to 'Cancel', :back, class: "btn btn-default btn-lg" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -1,6 +1,5 @@
-.glyphicon-liked {
-	color: #d41b1b;
-}
+
+
 
 /* Navbar Styles */
 
@@ -52,6 +51,21 @@
 
 .signup-button:hover {
 	background-color: #F4716E !important;
+}
+
+.dropdown .btn-link {
+	margin-top: 8px;
+	font-size: 14px;
+	text-decoration: none !important;
+	outline: none;
+}
+
+.dropdown .btn-link:hover {
+	background: transparent;
+}
+
+.dropdown .btn:focus,.btn:active {
+   outline: none !important;
 }
 
 
@@ -237,6 +251,24 @@ span.like-count {
 	color: rgb(182, 182, 182)
 }
 
+/* Post Tags Styles */
+
+.tags {
+	padding-left: 3px;
+	padding-top: 12px;
+	font-size: 15px;
+	color: rgb(145, 145, 145);
+}
+
+.tags a {
+	color: rgb(155, 155, 155);
+}
+
+.tags a:hover, .tags a:focus {
+	color: rgb(98, 98, 98);
+	text-decoration: none;
+}
+
 
 /* vertically resize textarea box */
 
@@ -368,6 +400,7 @@ span.text-muted {
 	padding-left: 0px;
 }
 	}
+
 
 /* Responsive button sizes */
 @media (min-width: 100px) and (max-width: 400px) {

@@ -46,6 +46,12 @@
       <div itemprop="dateCreated" class="timestamp">
           <%= time_ago_in_words(post.created_at) %> ago
         </div>
+      <% if post.tags.any? %>
+        <div class = "tags">
+          <span class="glyphicon glyphicon-tag"></span> 
+            <%= raw post.tag_list.map { |t| link_to t, tag_path(t), class: "btn btn-default btn-xs"}.join(' ') %>
+        </div>
+      <% end %>
     </div>
   </div>
 <% end %>
