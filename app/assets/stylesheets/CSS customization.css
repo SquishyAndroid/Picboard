@@ -20,14 +20,7 @@ span.timestamp {
 	padding-left: 12px;
 	padding-right: 8px;
 	margin-bottom: 15px;
-	cursor: pointer;
 }
-
-h2:hover {
-	color: rgba(236, 82, 82, 0.99) !important;
-	cursor: pointer;
-}
-
 
 /* Navbar Styles */
 
