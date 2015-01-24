@@ -1,6 +1,7 @@
 <div itemscope itemtype="http://schema.org/Blog" id="posts">
 <% @posts.each do |post| %>
   <div class="box panel panel-default">
+    <h2 itemprop= "name"><%= post.description %></h2>
     <span itemprop = "image">
       <%= link_to image_tag(post.image.url(:original)), post %>
     <span>
@@ -9,12 +10,13 @@
         <tr>
           <td rowspan="3"><div class="round-image-50"><%= image_tag(post.user.avatar.url(:thumb)) %>
           </div></td>
-          <td><p>
-            <strong itemprop="author"><%= post.user.name if post.user %></strong>
+          <td><p class="author" itemprop="author">
+            <strong><%= post.user.name if post.user %>
+              <span itemprop="dateCreated" class="timestamp"> | 
+                <%= time_ago_in_words(post.created_at) %> ago
+              </span>
+            </strong>
           </p></td>
-        </tr>
-        <tr>
-          <td><p itemprop= "name"><%= post.description %></p></td>
         </tr>
       </table>
       <% if post.user %>
@@ -43,9 +45,6 @@
           <% end %>
         </div>
       <% end %>
-      <div itemprop="dateCreated" class="timestamp">
-          <%= time_ago_in_words(post.created_at) %> ago
-        </div>
       <% if post.tags.any? %>
         <div class = "tags">
           <span class="glyphicon glyphicon-tag"></span> 

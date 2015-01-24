@@ -1,4 +1,32 @@
 
+body {
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+p.author {
+	color: rgba(236, 82, 82, 0.99);
+	font-size: 14px;
+}
+
+span.timestamp {
+	color: rgba(0, 0, 0, 0.82);
+	font-weight: lighter;
+}
+
+.box h2, .panel h2 {
+	font-weight: bold;
+	font-size: 26px;
+	color: #5c5c5c;
+	padding-left: 12px;
+	padding-right: 8px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}
+
+h2:hover {
+	color: rgba(236, 82, 82, 0.99) !important;
+	cursor: pointer;
+}
 
 
 /* Navbar Styles */
@@ -7,6 +35,7 @@
 	border-radius: 0px !important;
 	border-color: rgba(255, 255, 255, 0.8) !important;
 	box-shadow: 1px 2px 8px rgba(142, 142, 142, 0.72);
+	font-size: 15px;
 }
 
 .navbar-toggle {
@@ -71,7 +100,7 @@
 
 /* Home Page */
 h1, h2, h3, h4 {
-	font-family: helvetica;
+	font-family: 'Source Sans Pro', sans-serif;;
 }
 
 .jumbotron {
@@ -224,8 +253,8 @@ h1, h2, h3, h4 {
 	border: 0px;
 	font-weight: bold;
 	font-size: 15px;
-	margin-top: 4px;
-	margin-left: 10px;
+	margin-top: 12px;
+	margin-left: 8px;
 	padding-top: 3px;
 	text-decoration: none;
 	float: right;
@@ -238,17 +267,9 @@ h1, h2, h3, h4 {
 
 
 span.like-count {
-	font-family: helvetica;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: bold;
 	font-size: 15px;
-}
-
-/* timestamp */
-
-.timestamp {
-	padding-top: 6px;
-	padding-left: 3px;
-	color: rgb(182, 182, 182)
 }
 
 /* Post Tags Styles */
@@ -281,13 +302,13 @@ textarea {
 
 .round-image-50 {
 	background-color: white;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	height: 46px;
-	width: 46px;
+	border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	height: 35px;
+	width: 35px;
 	margin-bottom: 6px;
-	margin-right: 15px;
+	margin-right: 8px;
 	overflow: hidden;
 	text-align: center;
   }
@@ -323,7 +344,7 @@ blockquote {
 }
 
 .comments-wrapper p {
-	padding-left: 60px;
+	padding-left: 50px;
 }
 
 #comments .round-image-50 {

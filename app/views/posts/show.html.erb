@@ -6,17 +6,22 @@
   	</div>
   </div>
 	<div class="panel panel-default">
+		<h2 itemprop= "name"><%= @post.description %></h2>
 		<%= image_tag @post.image.url(:original) %>
 		<div class="panel-body">
 			<table>
-				<tr>
-					<td rowspan="3"><div class="round-image-50"><%= image_tag(@post.user.avatar.url(:thumb)) %></div></td>
-					<td><p><strong itemprop="author"><%= @post.user.name if @post.user %></strong></p></td>
-				</tr>
-				<tr>
-					<td><p itemprop="name"><%= @post.description %></p></td>
-				</tr>
-			</table>
+        <tr>
+          <td rowspan="3"><div class="round-image-50"><%= image_tag(@post.user.avatar.url(:thumb)) %>
+          </div></td>
+          <td><p class="author" itemprop="author">
+            <strong><%= @post.user.name if @post.user %>
+              <span itemprop="dateCreated" class="timestamp"> | 
+                <%= time_ago_in_words(@post.created_at) %> ago
+              </span>
+            </strong>
+          </p></td>
+        </tr>
+      </table>
 			<div class="show_actions">
 				<% if @post.user == current_user %>
           <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
@@ -49,9 +54,6 @@
 		        <% end %>
 		      <% end %>
       </div>
-      <div class="timestamp">
-				<%= time_ago_in_words(@post.created_at) %> ago
-			</div>
 			<% if @post.tags.any? %>
 			<div class = "tags">
         <span class="glyphicon glyphicon-tag"></span> 
