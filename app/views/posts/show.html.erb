@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <title><%= @post.description %> - Pixbored</title>
+<% end %>
+
 <div itemprop="BlogPosting" class="row">
 	<div class="post-navigation">
 		<div class="btn-group btn-group-sm">
@@ -6,8 +10,10 @@
   	</div>
   </div>
 	<div class="panel panel-default">
-		<h2 itemprop= "name" style="padding-left: 12px;"><%= @post.description %></h2>
-		<%= image_tag @post.image.url(:original) %>
+		<header>
+			<h2 itemprop= "name" style="padding-left: 12px;"><%= @post.description %></h2>
+			<%= image_tag @post.image.url(:original) %>
+		</header>
 		<div class="panel-body">
 			<table>
         <tr>

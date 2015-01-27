@@ -1,10 +1,17 @@
+
+<% content_for :head do %>
+  <title>Pixbored - Laugh Hard. Work Less</title>
+<% end %>
+
 <div itemscope itemtype="http://schema.org/Blog" id="posts">
 <% @posts.each do |post| %>
   <div class="box panel panel-default">
-    <h2 itemprop= "name" style="padding-left: 12px;"><%= post.description %></h2>
-    <span itemprop = "image">
-      <%= link_to image_tag(post.image.url(:original)), post %>
-    <span>
+    <header>
+      <h2 itemprop= "name" style="padding-left: 12px;"><%= post.description %></h2>
+      <span itemprop = "image">
+        <%= link_to image_tag(post.image.url(:original)), post %>
+      <span>
+    </header>
     <div class="panel-body">
       <table>
         <tr>
