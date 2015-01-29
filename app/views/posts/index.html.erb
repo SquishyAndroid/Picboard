@@ -29,13 +29,13 @@
       <% if post.user %>
         <div class="show_actions">
           <%= link_to post_path(post, anchor: 'comments' ), class: "btn btn-default btn-xs" do%>
-            <span class="glyphicon glyphicon-comment"></span>
+            <span class="glyphicon glyphicon-comment" title="comments"></span>
             <%= post.comments.count %>
           <% end %>
           <% if user_signed_in? %>
             <% if current_user.liked?(post) %>
               <%= link_to dislike_post_path(post), method: :put, remote: true, data: { type: :json }, class: "btn btn-default btn-xs" do %>
-                <span class="glyphicon glyphicon-heart" style="color:#d41b1b"></span>
+                <span class="glyphicon glyphicon-heart" style="color:#d41b1b" title="likes"></span>
                   <span class="like-count" style="color:rgba(51, 51, 51, 0.68)"><%= post.get_upvotes.size %></span>
               <% end %>
             <% else %>

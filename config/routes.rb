@@ -17,7 +17,7 @@ Pinteresting::Application.routes.draw do
   root "posts#index"
   get "about" => "pages#about"
   get "terms_of_service" => "pages#terms_of_service"
-  get "copyright_policy" => "pages#copyright_policy"
+  get "privacy_policy" => "pages#privacy_policy"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

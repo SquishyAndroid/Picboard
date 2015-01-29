@@ -12,7 +12,9 @@
 	<div class="panel panel-default">
 		<header>
 			<h2 itemprop= "name" style="padding-left: 12px;"><%= @post.description %></h2>
-			<%= image_tag @post.image.url(:original) %>
+			<span itemprop = "image">
+				<%= image_tag @post.image.url(:original) %>
+			</span>
 		</header>
 		<div class="panel-body">
 			<table>
@@ -31,20 +33,20 @@
 			<div class="show_actions">
 				<% if @post.user == current_user %>
           <%= link_to @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default, btn-xs" do %>
-            <span class="glyphicon glyphicon-trash"></span>
+            <span class="glyphicon glyphicon-trash" title="delete"></span>
           <% end %>
 					<%= link_to edit_post_path(@post), class: "btn btn-default, btn-xs" do %>
-            <span class="glyphicon glyphicon-edit"></span>
+            <span class="glyphicon glyphicon-edit" title="edit"></span>
           <% end %>
         <% end %>
         <%= link_to post_path(@post, anchor: 'comments' ), class: "btn btn-default btn-xs" do %>
-          <span class="glyphicon glyphicon-comment"></span>
+          <span class="glyphicon glyphicon-comment" title="comments"></span>
           <%= @post.comments.count %>
         <% end %>
         <% if user_signed_in? %>
 	        <% if current_user.liked?(@post) %>
 		       	<%= link_to dislike_post_path(@post), method: :put, remote: true, data: { type: :json, toggle_href: like_post_path(@post), id: @post.id }, class: "btn btn-default btn-xs" do %>
-		          <span class="glyphicon glyphicon-heart" style="color:#d41b1b"></span>
+		          <span class="glyphicon glyphicon-heart" style="color:#d41b1b" title="like"></span>
 		            <span class="like-count" style="color:rgba(51, 51, 51, 0.68)"><%= @post.get_upvotes.size %></span>
 		        <% end %>
 		      <% else %>
