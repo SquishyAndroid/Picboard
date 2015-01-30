@@ -24,6 +24,10 @@ gem 'acts-as-taggable-on', '~> 3.4.3'
 
 gem 'simple_form', '~>3.0.2'
 
+gem 'omniauth-facebook', '2.0.0'
+
+gem 'omniauth', '~> 1.2.2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
