@@ -11,7 +11,9 @@
   </div>
 	<div class="panel panel-default">
 		<header>
-			<h2 itemprop= "name" style="padding-left: 12px;"><%= @post.description %></h2>
+			<% if @post.description == 1 %>
+				<h2 itemprop= "name" style="padding-left: 12px;"><%= @post.description %></h2>
+			<% end %>
 			<span itemprop = "image">
 				<%= image_tag @post.image.url(:original) %>
 			</span>
