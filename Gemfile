@@ -28,6 +28,10 @@ gem 'omniauth-facebook', '2.0.0'
 
 gem 'omniauth', '~> 1.2.2'
 
+gem 'omniauth-facebook-access-token', '~> 0.1.7'
+
+gem 'certified', '~> 1.0.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

@@ -13,7 +13,7 @@ Pinteresting::Application.routes.draw do
     end
   end
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root "posts#index"
   get "about" => "pages#about"
   get "terms_of_service" => "pages#terms_of_service"

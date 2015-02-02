@@ -27,22 +27,23 @@
   <%= favicon_link_tag '/favicon.ico' %>
 </head>
 <body>
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '344644069075513',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1391367397837217',
+        xfbml      : true,
+        version    : 'v2.2'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
   </script>
 
 	<%= render 'layouts/header' %>

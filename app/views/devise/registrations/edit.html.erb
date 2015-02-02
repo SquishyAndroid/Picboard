@@ -29,7 +29,7 @@
       <% end %>
 
       <div class = "form-group">
-        <%= f.label :New_Password %>
+        <%= f.label :Change_Password %>
         <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
         <span class="help-block">
           <em>Leave this field blank if you do not wish to change your password</em>
@@ -37,10 +37,9 @@
       </div>
 
       <div class = "form-group">
-        <%= f.label :Current_Password %>
-        <%= f.password_field :current_password, class: "form-control" %>
+        <%= f.label :Confirm_new_Password %>
+        <%= f.password_field :password, class: "form-control", autocomplete: "off" %>
         <span class="help-block">
-          <em>Enter your current password to confirm the changes</em>
         </span>
       </div>
 
