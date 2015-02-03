@@ -7,7 +7,10 @@
 <% @posts.each do |post| %>
   <div class="box panel panel-default">
     <header>
+      <% if post.description.blank? %>
+      <% else %>
         <h2 itemprop= "name" style="padding-left: 12px;"><%= post.description %></h2>
+      <% end %>
       <span itemprop = "image">
         <%= link_to image_tag(post.image.url(:original)), post %>
       <span>
