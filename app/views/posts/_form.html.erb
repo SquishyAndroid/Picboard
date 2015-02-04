@@ -1,3 +1,7 @@
+<% content_for :head do %>
+  <title>Pixbored | Upload</title>
+<% end %>
+
 <%= form_for @post, html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
