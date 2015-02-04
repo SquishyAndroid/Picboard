@@ -8,13 +8,13 @@ class Post < ActiveRecord::Base
 
 	validates :image, presence: true
 	
-
 	def next
-  	Post.where(["id < ?", id]).order(:id).last
+	  	Post.where(["id < ?", id]).order(:id).last
+		end
+
+		def previous
+		  Post.where(["id > ?", id]).order(:id).first
 	end
 
-	def previous
-	  Post.where(["id > ?", id]).order(:id).first
-	end
 
 end

@@ -30,6 +30,8 @@ gem 'omniauth', '~> 1.2.2'
 
 gem 'omniauth-facebook-access-token', '~> 0.1.7'
 
+gem 'omniauth-google-oauth2', '~> 0.2.6'
+
 gem 'certified', '~> 1.0.0'
 
 # Use SCSS for stylesheets

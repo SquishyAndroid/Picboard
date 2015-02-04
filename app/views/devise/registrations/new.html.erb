@@ -9,6 +9,13 @@
 		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 
+		  <div class="social-login">
+    <%= link_to user_omniauth_authorize_path(:facebook), class: "btn btn-primary btn-lg btn-facebook" do %>
+      <i class="fa fa-facebook"></i>
+        <strong>Sign up with Facebook</strong>
+    <% end %>
+  </div>
+		  <hr>
 		  <div class = "form-group">
 		  	<%= f.label :Username %>
 		  	<%= f.text_field :name, :maxlength => 16, autofocus: true, class: "form-control" %>

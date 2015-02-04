@@ -1,4 +1,34 @@
 
+/* social login buttons */
+
+.social-login {
+	padding
+}
+
+.btn-facebook {
+	background-color: #3b589e !important;
+	border-radius: 4px !important;
+	width: 100%;
+	padding: 15px 16px !important;
+	border: 0px !important;
+}
+
+.btn-googleplus {
+	background-color: #dd4c39 !important;
+	border-radius: 4px !important;
+	padding: 15px 16px !important;
+	border: 0px !important;
+	margin-left: 25px;
+}
+
+.btn-facebook .fa strong, .btn-googleplus .fa strong{
+	font-size: 20px;
+}
+
+.btn-facebook strong, .btn-googleplus strong {
+	padding-left: 6px;
+} 
+
 body {
 	font-family: 'Source Sans Pro', sans-serif !important;
 }
