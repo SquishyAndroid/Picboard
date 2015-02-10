@@ -1,5 +1,10 @@
 <% content_for :head do %>
   <title><%= @post.description %> | Pixbored</title>
+  <meta property="og:site_name" content="Pixbored" />
+  <meta property="og:title" content="<%= @post.description %>" />
+  <meta property="og:url" content="<%= "http://pixbored.com" + post_path(@post) %>" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:image" content="<%= @post.image.url(:fixed) %>" />
 <% end %>
 
 <div itemprop="BlogPosting" class="row">
