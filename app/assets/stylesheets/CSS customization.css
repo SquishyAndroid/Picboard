@@ -40,13 +40,6 @@ span.timestamp {
 	font-weight: lighter;
 }
 
-.box h2, .panel h2 {
-	font-weight: bold;
-	font-size: 26px;
-	color: #5c5c5c;
-	padding-right: 8px;
-	margin-bottom: 15px;
-}
 
 /* Navbar Styles */
 
@@ -117,40 +110,29 @@ span.timestamp {
 }
 
 
-/* Home Page */
-h1, h2, h3, h4 {
-	font-family: 'Source Sans Pro', sans-serif;;
-}
+/* Post Title Link */
 
-.jumbotron {
-	border: 1px solid rgb(236,236,236);
-	padding-top: 10px !important;
-	padding-right: 10px !important;
-	max-width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.jumbotron h1 {
-	font-size: 53px;
+.box h2, .panel h2 {
 	font-weight: bold;
-	padding-bottom: 5px;
+	font-size: 26px;
+	color: #5c5c5c;
+	padding-right: 8px;
+	margin-bottom: 15px;
 }
 
-.jumbotron p {
-	padding-left: 5px;
-	font-weight: light;
+header a {
+	font-weight: bold;
+	font-size: 26px;
+	color: #5c5c5c;
+	padding-right: 8px;
+	margin-bottom: 15px;
 }
 
-.jumbotron .fa-times {
-	float: right;
-	color: rgb(150, 150, 150);
+header a:hover, header a:focus {
+	color: #d9534f;
+	text-decoration: none;
 }
 
-.jumbotron .fa-times:hover {
-	color: rgb(76, 76, 76);
-	cursor: pointer;
-}
 
 /* Index Panel sizing */
 
