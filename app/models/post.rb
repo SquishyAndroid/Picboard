@@ -7,10 +7,11 @@ class Post < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100#" }
 
 	validates :image, presence: true
+	validates :description, presence: true
 
-	def to_param
-  	"#{id} #{description}".parameterize
-	end
+	extend FriendlyId
+  friendly_id :description, use: :slugged
+
 	
 	def next
 	  	Post.where(["id < ?", id]).order(:id).last
