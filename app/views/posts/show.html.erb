@@ -4,7 +4,7 @@
   <meta property="og:title" content="<%= @post.description %>" />
   <meta property="og:url" content="<%= "http://pixbored.com" + post_path(@post) %>" />
   <meta property="og:type" content="blog" />
-  <meta property="og:image" content="<%= @post.image.url(:fixed) %>" />
+  <meta property="og:image" content="<%= @post.image.url %>" />
 <% end %>
 
 <div itemprop="BlogPosting" class="row">
