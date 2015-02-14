@@ -9,8 +9,9 @@ class Post < ActiveRecord::Base
 	validates :image, presence: true
 	validates :description, presence: true
 
-	extend FriendlyId
-  friendly_id :description, use: :slugged
+	def to_param
+  	"#{id} #{description}".parameterize
+	end
 
 	
 	def next
