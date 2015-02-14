@@ -43,7 +43,9 @@
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '1391367397837217',
+        status     : true,
         xfbml      : true,
+        cookie     : true,
         version    : 'v2.2'
       });
     };
@@ -68,6 +70,10 @@
 </body>
 </html>
 
+<script language="javascript">
+ function fbshareCurrentPage()
+ {window.open("https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false; }
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

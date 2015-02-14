@@ -8,12 +8,7 @@
 <% end %>
 
 <div itemprop="BlogPosting" class="row">
-	<div class="post-navigation">
-		<div class="btn-group btn-group-sm">
-			<%= link_to "Previous", @post.previous, class: "btn btn-default" if @post.previous.present? %>
-			<%= link_to "Next", @post.next, class: "btn btn-default" if @post.next.present? %>
-  	</div>
-  </div>
+
 	<div class="panel panel-default">
 		<header>
 			<% if @post.description.blank? %>
@@ -78,6 +73,17 @@
       <% end %>
 	</div>
 </div>
+
+<div class="post-navigation">
+		<a href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook" class="btn btn-primary btn-sm" id="facebook-share">
+			<i class="fa fa-facebook"></i>
+			Facebook</a>
+		<div class="btn-group btn-group-sm">
+			<%= link_to "Previous", @post.previous, class: "btn btn-default" if @post.previous.present? %>
+			<%= link_to "Next", @post.next, class: "btn btn-default" if @post.next.present? %>
+  	</div>
+  </div>
+
 <div class="comment-main">
 	<div class="comment-form">
 		<h5>
