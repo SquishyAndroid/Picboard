@@ -3,6 +3,11 @@
 	float: left;
 }
 
+#tag_cloud li {
+	padding-top: 5px;
+}
+
+
 
 /* social login buttons */
 
@@ -42,6 +47,20 @@ p.author {
 span.timestamp {
 	color: rgba(0, 0, 0, 0.82);
 	font-weight: lighter;
+}
+
+/* tag cloud styles */
+
+#tag_cloud a {
+	font-size: 15px;
+	color: rgb(84, 84, 84);
+	margin-left: 20px;
+}
+
+#tag_cloud a:hover, #tag_cloud:focus {
+	color: rgba(236, 82, 82, 0.99);
+	text-decoration: none;
+	background-color: white;
 }
 
 
@@ -103,6 +122,10 @@ span.timestamp {
 	font-size: 14px;
 	text-decoration: none !important;
 	outline: none;
+}
+
+.dropdown li {
+	font-size: 15px !important;
 }
 
 .dropdown .btn-link:hover {
@@ -419,44 +442,59 @@ blockquote {
 }
 
 /* mobile comment styles */
-@media (min-width: 100px) and (max-width: 400px) {
-#comments .round-image-50 {
-	height: 35px;
-	width: 35px;
-}
-span.text-muted {
-	display:block;
-}
-.comment-main .btn-danger {
-	float: right;
-}
-.comments-wrapper p {
-	padding-left: 0px;
-}
+
+@media (max-width: 767px) {
+	#tag_cloud a {
+		font-size: 15px;
+		color: #FFFFFF;
+		margin-left: 20px;
 	}
+
+	#tag_cloud a:hover, #tag_cloud:focus {
+		color: rgba(236, 82, 82, 0.99);
+		text-decoration: none;
+		background-color: #3d3d3d;
+	}
+}
+
+@media (min-width: 100px) and (max-width: 400px) {
+	#comments .round-image-50 {
+		height: 35px;
+		width: 35px;
+	}
+	span.text-muted {
+		display:block;
+	}
+	.comment-main .btn-danger {
+		float: right;
+	}
+	.comments-wrapper p {
+		padding-left: 0px;
+	}
+}
 
 
 /* Responsive button sizes */
 @media (min-width: 100px) and (max-width: 400px) {
-.btn-responsive {
-	width: 100%;
-}
+	.btn-responsive {
+		width: 100%;
+	}
+		}
+
+	.btn-responsive {
+		width: 100%;
 	}
 
-.btn-responsive {
-	width: 100%;
-}
-
-/* align jumbotron main text on mobile devices */
-@media (min-width: 100px) and (max-width: 400px) {
-.jumbotron h1 {
-	text-align: center;
-}
-.jumbotron {
-	width: 285px;
-	padding-left: 10px !important;
-}
+	/* align jumbotron main text on mobile devices */
+	@media (min-width: 100px) and (max-width: 400px) {
+	.jumbotron h1 {
+		text-align: center;
 	}
+	.jumbotron {
+		width: 285px;
+		padding-left: 10px !important;
+	}
+}
 
 span.file-input {
 	display: none;
