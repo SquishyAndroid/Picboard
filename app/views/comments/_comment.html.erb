@@ -8,7 +8,8 @@
       <p><%= comment.body %></p>
       <p class="comment-image"><%= image_tag comment.image.url(:original) if comment.image?%></p>
       <% if comment.user == current_user %>
-          <span style="float:right;font-size:13px"><%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" } %></span>
-        <% end %>
+        <span style="float:right;font-size:13px"><%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" } %></span>
+      <% end %>
   </div>
+  <hr>
 <% end %>

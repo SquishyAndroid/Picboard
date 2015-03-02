@@ -7,6 +7,21 @@
   <meta property="og:image" content='<%= @post.image.url(:original) %>' />
 <% end %>
 
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <%= image_tag @post.image.url(:original) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div itemprop="BlogPosting" class="row">
 
 	<div class="panel panel-default">
@@ -15,7 +30,7 @@
 			<% else %>
 				<h2 itemprop= "name" style="padding-left: 12px;"><%= @post.description %></h2>
 			<% end %>
-			<span itemprop = "image">
+			<span id= "post-image" itemprop = "image" data-toggle="modal" data-target="#myModal">
 				<%= image_tag @post.image.url(:original) %>
 			</span>
 		</header>

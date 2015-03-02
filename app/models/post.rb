@@ -9,6 +9,7 @@ class Post < ActiveRecord::Base
 	validates :image, presence: true
 	validates :description, presence: true
 
+
 	def to_param
   	"#{id} #{description}".parameterize
 	end

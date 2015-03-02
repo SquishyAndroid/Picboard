@@ -23,10 +23,26 @@ class CommentsController < ApplicationController
     end
   end
 
-  def upvote
-    @post = Post.find(params[:id])
-    @comment = @post.comment.upvote_by current_user
-    redirect_to :back
+  def like
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.liked_by current_user
+
+    respond_to do |format|
+      format.html {redirect_to :back }
+      format.json { render json: { count: @post.get_upvotes.size, id: params[:id] } }
+    end
+  end
+
+  def dislike
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.disliked_by current_user
+
+    respond_to do |format|
+      format.html {redirect_to :back }
+      format.json { render json: { count: @post.get_upvotes.size, id: params[:id] } }
+    end
   end
 
   def edit
@@ -48,6 +64,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:link_id, :body, :user_id, :image)
+      params.require(:comment).permit(:post_id, :body, :user_id, :image)
     end
 end

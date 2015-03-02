@@ -1,13 +1,17 @@
+
+strong {
+	font-weight: 600 !important;
+}
+
 #facebook-share {
 	color: white;
 	float: left;
 }
 
-#tag_cloud li {
-	padding-top: 5px;
+
+hr {
+	margin-bottom: 0px !important;
 }
-
-
 
 /* social login buttons */
 
@@ -63,6 +67,9 @@ span.timestamp {
 	background-color: white;
 }
 
+#tag_cloud li {
+	padding-top: 5px;
+}
 
 /* Navbar Styles */
 
@@ -71,10 +78,27 @@ span.timestamp {
 	border-color: rgba(255, 255, 255, 0.8) !important;
 	box-shadow: 1px 2px 8px rgba(142, 142, 142, 0.72);
 	font-size: 15px;
+	min-height: 70px !important;
+}
+
+.container-fluid {
+	max-width: 1000px;
+}
+
+#brand {
+	font-weight: bold;
+	font-size: 45px;
+	color: white;
+	letter-spacing: -2px;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus{
+	text-decoration: none !important;
 }
 
 .navbar-toggle {
 	border-color: transparent !important;
+	padding-top: 17px !important;
 }
 
 .navbar-toggle:hover, .navbar-toggle:focus {
@@ -82,11 +106,18 @@ span.timestamp {
 }
 
 .navbar-brand {
+	margin-top: 14px !important;
 	padding: 5px 10px 10px 15px !important;
 }
 
 .navbar-brand img {
 	height: 40px;
+}
+
+.navbar-right {
+	margin-top: 9px !important;
+	font-weight: 600;
+	font-size: 16px;
 }
 
 .upload-button {
@@ -103,6 +134,10 @@ span.timestamp {
 
 .nav a:hover {
 	background-color: #F4F4F4;
+}
+
+.btn-danger {
+	font-weight: 600 !important;
 }
 
 .signup-button {
@@ -125,7 +160,8 @@ span.timestamp {
 }
 
 .dropdown li {
-	font-size: 15px !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
 }
 
 .dropdown .btn-link:hover {
@@ -194,6 +230,40 @@ header a:hover, header a:focus {
 	max-width: 500px;
 }
 
+#post-image {
+	cursor: -webkit-zoom-in;
+}
+
+/* modal stylings */
+
+#myModal {
+	padding-top: 50px;
+}
+
+#myModal img {
+	width: 100%;
+}
+
+.close {
+	font-size: 30px !important;
+}
+
+.modal-header {
+	border-bottom: none !important;
+}
+
+.modal-dialog {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.modal-body {
+	padding: 0px !important;
+}
+
+.modal-backdrop.in {
+	opacity: 0.8 !important;
+}
 
 /* About page */
 .about h2 {
@@ -471,6 +541,12 @@ blockquote {
 	.comments-wrapper p {
 		padding-left: 0px;
 	}
+	#brand {
+	font-weight: bold;
+	font-size: 35px;
+	color: white;
+	letter-spacing: -2px;
+	}
 }
 
 
@@ -484,6 +560,7 @@ blockquote {
 	.btn-responsive {
 		width: 100%;
 	}
+
 
 	/* align jumbotron main text on mobile devices */
 	@media (min-width: 100px) and (max-width: 400px) {

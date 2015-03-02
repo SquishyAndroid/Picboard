@@ -9,6 +9,7 @@ Pinteresting::Application.routes.draw do
     resources :comments do
       member do 
         put "like", to: "comments#like"
+        put "dislike", to: "comments#dislike"
       end
     end
   end
