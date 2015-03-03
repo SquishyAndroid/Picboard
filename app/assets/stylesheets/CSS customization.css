@@ -176,7 +176,7 @@ span.timestamp {
 /* Post Title Link */
 
 .box h2, .panel h2 {
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 26px;
 	color: #5c5c5c;
 	padding-right: 8px;
